@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FWI Prediction</title>
+</head>
+<body>
+    <h2>Enter Environmental Parameters</h2>
+    <form action="{{url_for('predict_data')}}" method="post">
+        <label for="temperature">Temperature (°C):</label><br>
+        <input type="number" id="temperature" name="temperature" step="0.1" required><br><br>
+
+        <label for="rh">Relative Humidity (%):</label><br>
+        <input type="number" id="rh" name="rh" step="0.1" required><br><br>
+
+        <label for="ws">Wind Speed (km/h):</label><br>
+        <input type="number" id="ws" name="ws" step="0.1" required><br><br>
+
+        <label for="rain">Rain (mm):</label><br>
+        <input type="number" id="rain" name="rain" step="0.1" required><br><br>
+
+        <label for="ffmc">FFMC:</label><br>
+        <input type="number" id="ffmc" name="ffmc" step="0.1" required><br><br>
+
+        <label for="dmc">DMC:</label><br>
+        <input type="number" id="dmc" name="dmc" step="0.1" required><br><br>
+
+        <label for="isi">ISI:</label><br>
+        <input type="text" id="isi" name="isi" required><br><br>
+
+        <label for="classes">Classes:</label><br>
+        <input type="text" id="classes" name="classes" required><br><br>
+
+        <label for="region">Region:</label><br>
+        <input type="text" id="region" name="region" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h2>
+        The FWI prediction is {{result}}
+    </h2>
+</body>
+</html>
